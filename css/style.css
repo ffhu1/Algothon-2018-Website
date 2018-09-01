@@ -188,16 +188,55 @@
 }
 
 .about-section {
-  padding-top: 10rem;
+  padding-top: 5rem;
   padding-bottom: 5rem;
   background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
 }
 
 .about-section p {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
-.programme-section {
+.map {
+  width: auto;
+  height: 30rem;
+}
+
+@media (max-width: 992px) {
+  .map {
+    height: 20rem;
+  }
+}
+
+.map iframe {
+  pointer-events: none;
+}
+
+.activities-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.activities-section .activities-icon {
+  font-size: 24px;
+  text-align: center;
+  color: #487eb0;
+  margin-top: 10%;
+}
+
+.activities-section .featured-text {
+  padding-top: 2rem;
+  padding-bottom: 2rem;  
+  text-align: justify;
+}
+
+.activities-section .workshop-text {
+  padding-top: 1rem;
+  padding-bottom: 1rem;  
+  text-align: justify;
+}
+
+/*.programme-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -215,10 +254,10 @@
   padding: 0;
   list-style: none;
   position: relative;
-} 
+} */
 
 /* The line */
-.cbp_tmtimeline:before {
+/*.cbp_tmtimeline:before {
   content: '';
   position: absolute;
   top: 0;
@@ -232,9 +271,9 @@
 .cbp_tmtimeline > li {
   position: relative;
 }
-
+*/
 /* The date/time */
-.cbp_tmtimeline > li .cbp_tmtime {
+/*.cbp_tmtimeline > li .cbp_tmtime {
   display: block;
   width: 25%;
   padding-right: 100px;
@@ -244,27 +283,27 @@
 .cbp_tmtimeline > li .cbp_tmtime span {
   display: block;
   text-align: right;
-}
+}*/
 
 /*dates*/
-.cbp_tmtimeline > li .cbp_tmtime span:first-child {
+/*.cbp_tmtimeline > li .cbp_tmtime span:first-child {
   font-size: 0.7em;
   color: #bdd0db;
-}
+}*/
 
 /*even times*/
-.cbp_tmtimeline > li .cbp_tmtime span:last-child {
+/*.cbp_tmtimeline > li .cbp_tmtime span:last-child {
   font-size: 2em;
   color: #7f8fa6;
-}
+}*/
 
 /*odd times*/
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
+/*.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
   color: #757575;
-}
+}*/
 
 /* Right content */
-.cbp_tmtimeline > li .cbp_tmlabel {
+/*.cbp_tmtimeline > li .cbp_tmlabel {
   margin: 0 0 15px 25%;
   background: #487eb0;
   color: #fff;
@@ -274,10 +313,10 @@
   line-height: 1.4;
   position: relative;
   border-radius: 5px;
-}
+}*/
 
 /*odd content*/
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
+/*.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
   background: #607D8B;
 }
 
@@ -286,10 +325,10 @@
   margin-top: 0px;
   padding: 0 0 10px 0;
   border-bottom: 1px solid rgba(255,255,255,0.4);
-}
+}*/
 
 /* The triangle */
-.cbp_tmtimeline > li .cbp_tmlabel:after {
+/*.cbp_tmtimeline > li .cbp_tmlabel:after {
   right: 100%;
   border: solid transparent;
   content: " ";
@@ -304,14 +343,14 @@
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
   border-right-color: #607D8B;
-}
+}*/
 
 /* The icons */
-.cbp_tmtimeline > li .cbp_tmicon {
+/*.cbp_tmtimeline > li .cbp_tmicon {
   width: 40px;
-  height: 40px;
+  height: 40px;*/
 /*  font-family: 'ecoico';*/
-  speak: none;
+  /*speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -328,9 +367,9 @@
   left: 20%;
   top: 0;
   margin: 0 0 0 -25px;
-}
+}*/
 
-@media screen and (max-width: 65.375em) {
+/*@media screen and (max-width: 65.375em) {
 
   .cbp_tmtimeline > li .cbp_tmtime span:last-child {
     font-size: 1.5em;
@@ -378,7 +417,7 @@
     left: auto;
     margin: -55px 5px 0 0px;
   } 
-}
+}*/
 
 .speakers-section {
   padding-top: 5rem;
@@ -386,8 +425,36 @@
 }
 
 .speaker-member {
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
   text-align: center;
+}
+
+.speaker-member div.circle-avatar{
+/* make it responsive */
+max-width: 80%;
+width:80%;
+height:80%;
+display:block;
+/* div height to be the same as width*/
+padding-top:80%;
+
+/* make it a circle */
+border-radius:50%;
+
+/* Centering on image`s center*/
+background-position-y: center;
+background-position-x: center;
+background-repeat: no-repeat;
+
+/* it makes the clue thing, takes smaller dimension to fill div */
+background-size: cover;
+
+/* it is optional, for making this div centered in parent*/
+margin: 0 auto;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
 }
 
 .speaker-member img {
@@ -406,20 +473,43 @@
   margin-top: 0;
 }
 
-.sponsors-section {
+.sponsor-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
-.sponsors-section .featured-text {
+.sponsor-section .featured-text {
   padding: 2rem;
 }
 
 @media (min-width: 992px) {
-  .sponsors-section .featured-text {
+  .sponsor-section .featured-text {
     padding: 0 0 0 2rem;
     border-left: 0.5rem solid #487eb0;
   }
+}
+
+.details-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.details-section .details-icon {
+  font-size: 24px;
+  text-align: center;
+  color: #487eb0;
+  margin-top: 10%;
+}
+
+.details-section .featured-text {
+  padding-top: 2rem;
+  padding-bottom: 2rem;  
+  text-align: justify;
+}
+
+.details-section .details-text {
+  padding: 3rem;
+  text-align: justify;
 }
 
 /*.projects-section {
@@ -460,10 +550,15 @@
 
 .faq-section .jumbotron {
   background-color: #dcdde1;
+  padding:3rem;
 }
 
 .faq-section .jumbotron h4 {
   font-size: 1.5em;
+}
+
+.faq-section .jumbotron p {
+  text-align: justify;
 }
 
 

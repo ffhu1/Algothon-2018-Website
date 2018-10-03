@@ -5,14 +5,14 @@
  */
 #mainNav {
   min-height: 56px;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #487eb0;
-  border: 1px solid #487eb0;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 #mainNav .navbar-toggler:focus {
@@ -20,9 +20,26 @@
 }
 
 #mainNav .navbar-brand {
-  color: #161616;
+  color: rgba(225, 225, 225, 0.6);
   font-weight: 700;
   padding: .9rem 0;
+}
+
+#mainNav .navbar-nav .nav-item a{
+  color: rgba(225, 225, 225, 0.5);
+  float: right;
+}
+
+#mainNav .navbar-nav form button{
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: 'Varela Round';
+  font-size: 100%;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  border: 0;
+  width: 100%
 }
 
 #mainNav .navbar-nav .nav-item:hover {
@@ -59,12 +76,12 @@
   color: #616161 !important;
 }*/
 
-@media (min-width: 992px) {
+@media (min-width: 1600px) {
   #mainNav {
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
@@ -110,9 +127,9 @@
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 35rem;
+  min-height: 60rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.9) 0%, rgba(22, 22, 22, 0.5) 90%, #161616 100%), url("../img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.8) 20%, rgba(22, 22, 22, 0.5) 40%, rgba(22, 22, 22, 0.7) 80%, #161616 100%), url("../img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -125,8 +142,8 @@
 */
 .masthead h1 {
   font-family: 'Varela Round';
-  font-size: 2.5rem;
-  line-height: 2.5rem;
+  font-size: 2rem;
+  line-height: 2rem;
   letter-spacing: 0.8rem;
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
   -webkit-text-fill-color: transparent;
@@ -141,6 +158,10 @@
   -webkit-background-clip: text;
 }
 
+.masthead .masthead-logo {
+  width: 40%;
+}
+
 .masthead img {
   padding-top: 2rem;
   width: 60%;
@@ -148,23 +169,38 @@
 
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+    padding: 0;
+  }
+  .masthead .masthead-logo {
+    width: 40%;
+  }
+
   .masthead h1 {
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 0.8rem;
+  }
+  .masthead h2 {
+    max-width: 30rem;
+    font-size: 1.25rem;
   }
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   .masthead {
     height: 100vh;
     padding: 0;
   }
 
-
+  .masthead .masthead-logo {
+    width: 45%;
+  }
   .masthead h1 {
-    font-size: 6.5rem;
-    line-height: 6.5rem;
+    font-size: 2rem;
+    line-height: 2rem;
     letter-spacing: 0.8rem;
   }
   .masthead h2 {
@@ -175,9 +211,9 @@
 
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
+  padding: 1rem 1.75rem;
   font-family: 'Varela Round';
-  font-size: 80%;
+  font-size: 150%;
   text-transform: uppercase;
   letter-spacing: .15rem;
   border: 0;
@@ -201,13 +237,14 @@
 }
 
 .about-section {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
   background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
 }
 
 .about-section p {
   margin-bottom: 2rem;
+  font-size: 1rem;
 }
 
 .map {
@@ -226,8 +263,8 @@
 }
 
 .activities-section {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
 }
 
 .activities-section .activities-icon {
@@ -241,6 +278,7 @@
   padding-top: 2rem;
   padding-bottom: 2rem;  
   text-align: justify;
+  font-size: 1rem;
 }
 
 .activities-section .workshop-text {
@@ -249,8 +287,8 @@
   text-align: justify;
 }
 
-/*.programme-section {
-  padding-top: 5rem;
+.programme-section {
+  padding-top: 8rem;
   padding-bottom: 5rem;
 }
 
@@ -267,14 +305,14 @@
   padding: 0;
   list-style: none;
   position: relative;
-} */
+} 
 
 /* The line */
-/*.cbp_tmtimeline:before {
+.cbp_tmtimeline:before {
   content: '';
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 10%;
   width: 10px;
   background: #40739e;
   left: 20%;
@@ -284,9 +322,9 @@
 .cbp_tmtimeline > li {
   position: relative;
 }
-*/
+
 /* The date/time */
-/*.cbp_tmtimeline > li .cbp_tmtime {
+.cbp_tmtimeline > li .cbp_tmtime {
   display: block;
   width: 25%;
   padding-right: 100px;
@@ -296,28 +334,28 @@
 .cbp_tmtimeline > li .cbp_tmtime span {
   display: block;
   text-align: right;
-}*/
+}
 
 /*dates*/
-/*.cbp_tmtimeline > li .cbp_tmtime span:first-child {
+.cbp_tmtimeline > li .cbp_tmtime span:first-child {
   font-size: 0.7em;
   color: #bdd0db;
-}*/
+}
 
 /*even times*/
-/*.cbp_tmtimeline > li .cbp_tmtime span:last-child {
-  font-size: 2em;
+.cbp_tmtimeline > li .cbp_tmtime span:last-child {
+  font-size: 1.5em;
   color: #7f8fa6;
-}*/
+}
 
 /*odd times*/
-/*.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
   color: #757575;
-}*/
+}
 
 /* Right content */
-/*.cbp_tmtimeline > li .cbp_tmlabel {
-  margin: 0 0 15px 25%;
+.cbp_tmtimeline > li .cbp_tmlabel {
+  margin: 0 0 15px 28%;
   background: #487eb0;
   color: #fff;
   padding: 1.5em;
@@ -326,22 +364,22 @@
   line-height: 1.4;
   position: relative;
   border-radius: 5px;
-}*/
+}
 
 /*odd content*/
-/*.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
   background: #607D8B;
 }
 
 .cbp_tmtimeline > li .cbp_tmlabel h2 { 
-  font-size: 1.7em;
+  font-size: 1.2em;
   margin-top: 0px;
   padding: 0 0 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-}*/
+  /*border-bottom: 1px solid rgba(255,255,255,0.4);*/
+}
 
 /* The triangle */
-/*.cbp_tmtimeline > li .cbp_tmlabel:after {
+.cbp_tmtimeline > li .cbp_tmlabel:after {
   right: 100%;
   border: solid transparent;
   content: " ";
@@ -356,14 +394,14 @@
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
   border-right-color: #607D8B;
-}*/
+}
 
 /* The icons */
-/*.cbp_tmtimeline > li .cbp_tmicon {
+.cbp_tmtimeline > li .cbp_tmicon {
   width: 40px;
-  height: 40px;*/
-/*  font-family: 'ecoico';*/
-  /*speak: none;
+  height: 40px;
+  font-family: 'ecoico';
+  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -380,14 +418,16 @@
   left: 20%;
   top: 0;
   margin: 0 0 0 -25px;
-}*/
+}
 
-/*@media screen and (max-width: 65.375em) {
+@media screen and (max-width: 74.9em) {
 
   .cbp_tmtimeline > li .cbp_tmtime span:last-child {
-    font-size: 1.5em;
+    padding-top: 0.4rem;
+    font-size: 1.15em;
   }
 }
+
 
 @media screen and (max-width: 47.2em) {
   .cbp_tmtimeline:before {
@@ -430,44 +470,71 @@
     left: auto;
     margin: -55px 5px 0 0px;
   } 
-}*/
+}
 
 .speakers-section {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+}
+
+.speakers-section p {
+  font-size: 1rem;
 }
 
 .speaker-member {
   margin-bottom: 5rem;
   text-align: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 80em) {
+  .speaker-member {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 61.9725em) {
+  .speaker-member {
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .speaker-member {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
 }
 
 .speaker-member div.circle-avatar{
-/* make it responsive */
-max-width: 80%;
-width:80%;
-height:80%;
-display:block;
-/* div height to be the same as width*/
-padding-top:80%;
+  /* make it responsive */
+  max-width: 80%;
+  width:80%;
+  height:80%;
+  display:block;
+  /* div height to be the same as width*/
+  padding-top:80%;
 
-/* make it a circle */
-border-radius:50%;
+  /* make it a circle */
+  border-radius:50%;
 
-/* Centering on image`s center*/
-background-position-y: center;
-background-position-x: center;
-background-repeat: no-repeat;
+  /* Centering on image`s center*/
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
 
-/* it makes the clue thing, takes smaller dimension to fill div */
-background-size: cover;
+  /* it makes the clue thing, takes smaller dimension to fill div */
+  background-size: cover;
 
-/* it is optional, for making this div centered in parent*/
-margin: 0 auto;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
+  /* it is optional, for making this div centered in parent*/
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .speaker-member img {
@@ -475,8 +542,6 @@ bottom: 0;
   height: 300px;
   border: 5px solid #487eb0;
 }
-
-#speaker-unknown {}
 
 .speaker-member-unknown img { 
   width: 100%;
@@ -494,8 +559,8 @@ bottom: 0;
 }
 
 .register-section {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
   background-color: #161616;
 }
 
@@ -503,28 +568,26 @@ bottom: 0;
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 35rem;
+  min-height: 45rem;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  padding-bottom: 5rem;
 }
 
 .organizers-section .container{
   position: relative;
-  top: 25%;
-  transform: translateY(-50%);
 }
 
 .organizers-section .organizers-member{
-  padding-top: 1rem;
+  padding-top: 8rem;
 }
 
 .organizers-section p {
   padding-right: 2rem;
   padding-left: 2rem; 
   text-align: justify;
-  
 }
 
 @media (min-width: 992px) {
@@ -536,13 +599,13 @@ bottom: 0;
 
 @media (max-width: 992px) {
   .organizers-section .blackrock-member{
-    padding-top: 30rem;
+    padding-top: 10rem;
   }
 }
 
 .details-section {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 8rem;
+  padding-bottom: 1rem;
 }
 
 .details-section .details-icon {
@@ -554,6 +617,10 @@ bottom: 0;
 
 .details-section .details-text {
   padding-top: 10rem;
+  text-align: justify;
+}
+
+.details-section .code-of-conduct-text{
   text-align: justify;
 }
 
@@ -589,8 +656,8 @@ bottom: 0;
 }*/
 
 .faq-section {
-  padding-top: 10rem;
-  padding-bottom: 10rem;  
+  padding-top: 8rem;
+  padding-bottom: 5rem;
 }
 
 .faq-section .jumbotron {
